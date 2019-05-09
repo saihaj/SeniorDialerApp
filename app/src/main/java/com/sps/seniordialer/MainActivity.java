@@ -52,11 +52,12 @@ public class MainActivity extends AppCompatActivity {
 
         input = findViewById(R.id.editText);
 
-        input.setShowSoftInputOnFocus(false);
-        input.setCursorVisible(false);
+        input.setShowSoftInputOnFocus(false);   //disables softKeyboard
+        input.setCursorVisible(false);  //disables cursor
 
         Buttons();
 
+        //Makes the call
         btnDial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //Listner for buttons
     private void Buttons(){
 
         btnOne.setOnClickListener(new View.OnClickListener() {
@@ -229,6 +231,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Checks for permissions
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if(requestCode == REQUEST_CALL) {
@@ -240,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //sets the input to output field
     public void OnButtonClick(Button button, EditText inputNumber, String number){
         Log.v("stuff", "pressed button " + number);
         String cache = input.getText().toString();
