@@ -214,7 +214,7 @@
             android:layout_weight="1"
             android:background="@android:color/holo_green_dark"
             android:fontFamily="sans-serif-black"
-            android:onClick="onDial"
+            android:text="@string/dial"
             android:textSize="70sp"
             android:textStyle="bold" />
 

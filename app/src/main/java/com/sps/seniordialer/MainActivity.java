@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         Buttons();
 
-        //Makes the call
+        //Makes
         btnDial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -221,8 +221,13 @@ public class MainActivity extends AppCompatActivity {
                         new String[] {Manifest.permission.CALL_PHONE}, REQUEST_CALL);
             }
             else {
-                String dial = "tel:" + number;
-                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+                if(number.length()>=3) {
+
+                    String dial = "tel:" + number;
+                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+                } else{
+                    Toast.makeText(MainActivity.this, "Enter a valid phone number", Toast.LENGTH_SHORT).show();
+                }
             }
         }
         else {
