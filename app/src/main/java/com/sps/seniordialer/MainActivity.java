@@ -155,6 +155,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onDelete(v);
+            }
+        });
+
 
     }
 

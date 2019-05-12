@@ -16,7 +16,7 @@
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="wrap_content"
+            android:layout_width="304dp"
             android:layout_height="match_parent"
             android:clickable="false"
             android:cursorVisible="false"
