@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero, btnHash, btnStar, btnDelete, btnDial;
     EditText input;
+
 
     private static final int REQUEST_CALL = 1;
 
@@ -56,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
         input.setCursorVisible(false);  //disables cursor
 
         Buttons();
+        sounds();
 
-        //Makes
+        //Makes call
         btnDial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,14 +70,30 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void sounds(){
+        final MediaPlayer SoundOne = MediaPlayer.create(this, R.raw.one);
+        final MediaPlayer SoundTwo = MediaPlayer.create(this, R.raw.two);
+        final MediaPlayer SoundThree = MediaPlayer.create(this, R.raw.three);
+        final MediaPlayer SoundFour = MediaPlayer.create(this, R.raw.four);
+        final MediaPlayer SoundFive = MediaPlayer.create(this, R.raw.five);
+        final MediaPlayer SoundSix = MediaPlayer.create(this, R.raw.six);
+        final MediaPlayer SoundSeven = MediaPlayer.create(this, R.raw.seven);
+        final MediaPlayer SoundEight = MediaPlayer.create(this, R.raw.eight);
+        final MediaPlayer SoundNine = MediaPlayer.create(this, R.raw.nine);
+        final MediaPlayer SoundZero = MediaPlayer.create(this, R.raw.zero);
+        final MediaPlayer SoundClear = MediaPlayer.create(this, R.raw.clear);
+        final MediaPlayer SoundDial = MediaPlayer.create(this, R.raw.dial);
 
-    //Listner for buttons
+    }
+
+     //Listner for buttons
     private void Buttons(){
 
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 one(v);
+
             }
         });
 
@@ -164,7 +183,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
     private void one (View v){
         OnButtonClick(btnOne, input, "1");
