@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero, btnHash, btnStar, btnDelete, btnDial;
     EditText input;
 
-
     private static final int REQUEST_CALL = 1;
 
     @Override
@@ -57,20 +56,24 @@ public class MainActivity extends AppCompatActivity {
         input.setShowSoftInputOnFocus(false);   //disables softKeyboard
         input.setCursorVisible(false);  //disables cursor
 
+        final MediaPlayer SoundDial = MediaPlayer.create(this, R.raw.dial);
+
         Buttons();
-        sounds();
 
         //Makes call
         btnDial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundDial.start();
                 onDial();
                 onDelete(v);
             }
         });
     }
 
-    private void sounds(){
+     //Listner for buttons
+    private void Buttons(){
+
         final MediaPlayer SoundOne = MediaPlayer.create(this, R.raw.one);
         final MediaPlayer SoundTwo = MediaPlayer.create(this, R.raw.two);
         final MediaPlayer SoundThree = MediaPlayer.create(this, R.raw.three);
@@ -82,25 +85,20 @@ public class MainActivity extends AppCompatActivity {
         final MediaPlayer SoundNine = MediaPlayer.create(this, R.raw.nine);
         final MediaPlayer SoundZero = MediaPlayer.create(this, R.raw.zero);
         final MediaPlayer SoundClear = MediaPlayer.create(this, R.raw.clear);
-        final MediaPlayer SoundDial = MediaPlayer.create(this, R.raw.dial);
         final MediaPlayer SoundStar = MediaPlayer.create(this, R.raw.star);
         final MediaPlayer SoundHash = MediaPlayer.create(this, R.raw.hash);
-    }
-
-     //Listner for buttons
-    private void Buttons(){
 
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundOne.start();
                 one(v);
-
-            }
-        });
+            }});
 
         btnTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundTwo.start();
                 two(v);
             }
         });
@@ -108,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         btnThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundThree.start();
                 three(v);
             }
         });
@@ -115,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         btnFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundFour.start();
                 four(v);
             }
         });
@@ -122,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         btnFive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundFive.start();
                 five(v);
             }
         });
@@ -129,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
         btnSix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundSix.start();
                 six(v);
             }
         });
@@ -136,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
         btnSeven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundSeven.start();
                 seven(v);
             }
         });
@@ -143,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
         btnEight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundEight.start();
                 eight(v);
             }
         });
@@ -151,12 +155,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 nine(v);
+                SoundNine.start();
             }
         });
 
         btnZero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundZero.start();
                 zero(v);
             }
         });
@@ -164,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
         btnStar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundStar.start();
                 star(v);
             }
         });
@@ -171,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
         btnHash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundHash.start();
                 hash(v);
             }
         });
@@ -178,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SoundClear.start();
                 onDelete(v);
             }
         });
@@ -282,3 +291,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
