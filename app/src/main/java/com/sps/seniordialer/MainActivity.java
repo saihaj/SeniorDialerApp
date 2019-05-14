@@ -83,7 +83,8 @@ public class MainActivity extends AppCompatActivity {
         final MediaPlayer SoundZero = MediaPlayer.create(this, R.raw.zero);
         final MediaPlayer SoundClear = MediaPlayer.create(this, R.raw.clear);
         final MediaPlayer SoundDial = MediaPlayer.create(this, R.raw.dial);
-
+        final MediaPlayer SoundStar = MediaPlayer.create(this, R.raw.star);
+        final MediaPlayer SoundHash = MediaPlayer.create(this, R.raw.hash);
     }
 
      //Listner for buttons
