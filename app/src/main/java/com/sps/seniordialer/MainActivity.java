@@ -17,7 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import static android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+//import static android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
 
 
 public class MainActivity extends AppCompatActivity {
