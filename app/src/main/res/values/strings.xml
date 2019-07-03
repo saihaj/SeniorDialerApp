@@ -15,4 +15,5 @@
     <string name="hash">#</string>
     <string name="X">X</string>
     <string name="dial">Dial</string>
+    <string name="button">Button</string>
 </resources>
