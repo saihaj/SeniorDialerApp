@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SpeedDial">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/SpeedDialTextField"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:hint="Enter to Save for SpeedDial"
+            android:importantForAutofill="no"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/setOneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Save_Num_1"
+            android:onClick="SaveForOne"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/setTwoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Save_Num_2"
+            android:onClick="SaveForTwo"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/setThreeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Save_Num_3"
+            android:onClick="SaveForThree"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/setFourButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Save_Num_4"
+            android:onClick="SaveForFour"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/setFiveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Save_Num_5"
+            android:onClick="SaveForFive"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/setSixButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Save_Num_6"
+            android:onClick="SaveForSix"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/setSevenButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Save_Num_7"
+            android:onClick="SaveForSeven"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/setEightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Save_Num_8"
+            android:onClick="SaveForEight"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/setNineButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Save_Num_9"
+            android:onClick="SaveForNine"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/retOneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Ret_Num_1"
+            android:onClick="RetrieveForOne"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/retTwoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Ret_Num_2"
+            android:onClick="RetrieveForTwo"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/retThreeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Ret_Num_3"
+            android:onClick="RetrieveForThree"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/retFourButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Ret_Num_4"
+            android:onClick="RetrieveForFour"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/retFiveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Ret_Num_5"
+            android:onClick="RetrieveForFive"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/retSixButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Ret_Num_6"
+            android:onClick="RetrieveForSix"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/retSevenButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Ret_Num_7"
+            android:onClick="RetrieveForSeven"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/retEightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Ret_Num_8"
+            android:onClick="RetrieveForEight"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/retNineButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/Ret_Num_9"
+            android:onClick="RetrieveForNine"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>
