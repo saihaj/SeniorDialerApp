@@ -1,4 +1,6 @@
 # SeniorDialerApp
+[![Build Status](https://travis-ci.org/saihaj/SeniorDialerApp.svg?branch=master)](https://travis-ci.org/saihaj/SeniorDialerApp)
+
 This app is designed for people who want to use a smartphone for basic features. This is formulated for someone who has difficulty using smartphone. This app provides a big font dialer and a speed dial feature. More features will continue to pop up in future releases. 
 
 Go check out <a href="https://github.com/saihaj/SeniorDialerApp/releases">V1.0 release</a> 
