@@ -1,7 +1,6 @@
 package com.sps.seniordialer;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -12,9 +11,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -394,12 +391,12 @@ public class Dialer extends AppCompatActivity {
             }
             else {
                 if(number.length()>=3) {
-
                     String dial = "tel:" + number;
                     startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
-                } else{
+                    }
+                else{
                     Toast.makeText(Dialer.this, "Enter a valid phone number", Toast.LENGTH_SHORT).show();
-                }
+                     }
             }
         }
         else {
