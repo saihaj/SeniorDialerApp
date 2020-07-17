@@ -1,0 +1,52 @@
+{
+  "name": "saihaj-react-native-starter",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saihaj/SeniorDialerApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saihaj/SeniorDialerApp/issues"
+  },
+  "homepage": "https://github.com/saihaj/SeniorDialerApp#readme",
+  "license": " AGPL-3.0",
+  "scripts": {
+    "start:android": "react-native run-android",
+    "start:ios": "react-native run-ios",
+    "start": "react-native start",
+    "start-sims": "npm run start:ios && npm run start:android",
+    "test": "jest --color --watch",
+    "clean:android": "cd android && ./gradlew clean",
+    "clean:ios": "cd ios && rimraf Pods && xcodebuild clean",
+    "clean": "react-native-clean-project",
+    "lint": "eslint . --ext .js,.jsx,.json --color",
+    "install-assets": "react-native link",
+    "install-pods": "cd ios && pod install",
+    "postinstall": "pod-install ios"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-native": "0.63.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-json": "^2.1.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "jest": "^26.1.0",
+    "metro-react-native-babel-preset": "^0.60.0",
+    "pod-install": "^0.1.8",
+    "react-native-clean-project": "^3.3.0",
+    "react-test-renderer": "16.11.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

@@ -1,0 +1,10 @@
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    # Specify labels for npm pull requests
+    labels:
+      - "npm dependencies"
