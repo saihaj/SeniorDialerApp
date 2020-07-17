@@ -1,5 +1,6 @@
 {
 	"recommendations": [
 		"dbaeumer.vscode-eslint",
+		"fivethree.vscode-fastlane-snippets",
 	]
 }

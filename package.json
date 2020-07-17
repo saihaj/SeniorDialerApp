@@ -22,7 +22,10 @@
     "lint": "eslint . --ext .js,.jsx,.json --color",
     "install-assets": "react-native link",
     "install-pods": "cd ios && pod install",
-    "postinstall": "pod-install ios"
+    "postinstall": "pod-install ios",
+    "bump-patch": "npm version patch --no-git-tag-version && fastlane bump",
+    "bump-minor": "npm version minor --no-git-tag-version && fastlane bump",
+    "bump-major": "npm version major --no-git-tag-version && fastlane bump"
   },
   "dependencies": {
     "react": "16.13.1",
