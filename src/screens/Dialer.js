@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FlatList, StyleSheet, View, StatusBar } from 'react-native'
 import { shape, string, oneOfType, number } from 'prop-types'
 
+import { DialerContext } from '../lib/contexts'
 import Layout from '../components/Layout'
+
 import NumPadButton from '../components/NumPad'
 import DialButton from '../components/DialButton'
 import DialerInput from '../components/DialerInput'
@@ -21,6 +23,8 @@ const styles = StyleSheet.create( {
 } )
 
 const DialerScreen = () => {
+  const [ phoneNumber, setPhoneNumber ] = useState( '' )
+
   const renderButton = ( { item: { name, value } } ) => <NumPadButton value={value} name={name} />
 
   renderButton.propTypes = {
@@ -35,22 +39,24 @@ const DialerScreen = () => {
   }
 
   return (
-    <Layout>
-      <StatusBar hidden />
-      <View style={styles.container}>
-        <DialerInput />
-        <View style={{ flex: 6 }}>
-          <FlatList
-            data={BUTTONS_EN}
-            renderItem={renderButton}
-            keyExtractor={item => item.name}
-            numColumns={3}
-            scrollEnabled={false}
-          />
+    <DialerContext.Provider value={{ phoneNumber, setPhoneNumber }}>
+      <Layout>
+        <StatusBar hidden />
+        <View style={styles.container}>
+          <DialerInput />
+          <View style={{ flex: 6 }}>
+            <FlatList
+              data={BUTTONS_EN}
+              renderItem={renderButton}
+              keyExtractor={item => item.name}
+              numColumns={3}
+              scrollEnabled={false}
+            />
+          </View>
+          <DialButton />
         </View>
-        <DialButton />
-      </View>
-    </Layout>
+      </Layout>
+    </DialerContext.Provider>
   )
 }
 

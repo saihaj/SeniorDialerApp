@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Pressable, Text, StyleSheet, Dimensions } from 'react-native'
 import { string, oneOfType, number } from 'prop-types'
 import { RFValue } from 'react-native-responsive-fontsize'
+
+import { DialerContext } from '../lib/contexts'
 
 const { width } = Dimensions.get( 'window' )
 
@@ -22,7 +24,7 @@ const styles = StyleSheet.create( {
 } )
 
 const NumPadButton = ( { name, value } ) => {
-  const clickTest = () => console.log( value )
+  const { phoneNumber, setPhoneNumber } = useContext( DialerContext )
 
   return (
     <Pressable
@@ -32,7 +34,7 @@ const NumPadButton = ( { name, value } ) => {
         },
         styles.button,
       ]}
-      onPress={clickTest}
+      onPress={() => { setPhoneNumber( () => phoneNumber + value ) }}
     >
       <Text style={styles.name}>{name}</Text>
     </Pressable>

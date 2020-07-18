@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { StyleSheet, TextInput, View } from 'react-native'
 import { RFValue } from 'react-native-responsive-fontsize'
 import Cross from 'react-native-vector-icons/Entypo'
+
+import { DialerContext } from '../lib/contexts'
 
 const styles = StyleSheet.create( {
   wrapper: {
@@ -20,6 +22,7 @@ const styles = StyleSheet.create( {
     marginBottom: 'auto',
     height: RFValue( 50, 650 ),
     fontSize: RFValue( 30, 650 ),
+    marginRight: 10,
   },
   clearBtn: {
     color: '#575252',
@@ -32,19 +35,27 @@ const styles = StyleSheet.create( {
 } )
 
 const DialButton = () => {
-  const test = ''
+  const { phoneNumber, setPhoneNumber } = useContext( DialerContext )
+  const showX = phoneNumber.length > 0
+
   return (
     <View style={styles.wrapper}>
       <TextInput
-        style={styles.input}
         editable={false}
-        defaultValue="9915478960"
+        value={phoneNumber}
+        style={styles.input}
         keyboardType="number-pad"
         autoCompleteType="cc-number"
         dataDetectorTypes="phoneNumber"
         textContentType="telephoneNumber"
       />
-      <Cross name="cross" style={styles.clearBtn} />
+      {showX && (
+      <Cross
+        name="cross"
+        style={styles.clearBtn}
+        onPress={() => setPhoneNumber( '' )}
+      />
+      )}
     </View>
   )
 }
