@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Pressable, Text, StyleSheet } from 'react-native'
+import { Pressable, Text, StyleSheet, Alert, Vibration } from 'react-native'
 import { RFValue } from 'react-native-responsive-fontsize'
 import PhoneCall from 'react-native-immediate-phone-call'
 
@@ -21,10 +21,19 @@ const styles = StyleSheet.create( {
 } )
 
 const DialButton = () => {
-  const { phoneNumber } = useContext( DialerContext )
+  const { phoneNumber, setPhoneNumber } = useContext( DialerContext )
+
+  const initiateCall = () => {
+    Vibration.vibrate( 50 )
+    if ( phoneNumber.length > 3 && phoneNumber.length >= 10 ) {
+      PhoneCall.immediatePhoneCall( phoneNumber )
+      setPhoneNumber( '' )
+    }
+    Alert.alert( 'Enter a valid phone number' )
+  }
 
   return (
-    <Pressable style={styles.button} onPress={() => PhoneCall.immediatePhoneCall( phoneNumber )}>
+    <Pressable style={styles.button} onPress={initiateCall}>
       <Text style={styles.text}>DIAL</Text>
     </Pressable>
   )
