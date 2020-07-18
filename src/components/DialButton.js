@@ -9,7 +9,6 @@ const styles = StyleSheet.create( {
   button: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#5ED32A',
     borderRadius: 25,
     height: RFValue( 70, 650 ),
   },
@@ -33,7 +32,15 @@ const DialButton = () => {
   }
 
   return (
-    <Pressable style={styles.button} onPress={initiateCall}>
+    <Pressable
+      style={( { pressed } ) => [
+        {
+          backgroundColor: pressed ? '#55bf26' : '#5ED32A',
+        },
+        styles.button,
+      ]}
+      onPress={initiateCall}
+    >
       <Text style={styles.text}>DIAL</Text>
     </Pressable>
   )
