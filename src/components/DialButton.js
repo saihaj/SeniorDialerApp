@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Pressable, Text, StyleSheet } from 'react-native'
 import { RFValue } from 'react-native-responsive-fontsize'
+import PhoneCall from 'react-native-immediate-phone-call'
+
+import { DialerContext } from '../lib/contexts'
 
 const styles = StyleSheet.create( {
   button: {
@@ -17,10 +20,14 @@ const styles = StyleSheet.create( {
   },
 } )
 
-const DialButton = () => (
-  <Pressable style={styles.button}>
-    <Text style={styles.text}>DIAL</Text>
-  </Pressable>
-)
+const DialButton = () => {
+  const { phoneNumber } = useContext( DialerContext )
+
+  return (
+    <Pressable style={styles.button} onPress={() => PhoneCall.immediatePhoneCall( phoneNumber )}>
+      <Text style={styles.text}>DIAL</Text>
+    </Pressable>
+  )
+}
 
 export default DialButton
