@@ -8,7 +8,6 @@ target 'SeniorDialerApp' do
 
   use_react_native!(:path => config["reactNativePath"])
 
-  pod 'react-native-immediate-phone-call', :path => '../node_modules/react-native-immediate-phone-call'
 
   target 'SeniorDialerAppTests' do
     inherit! :complete
