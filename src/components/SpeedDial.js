@@ -6,6 +6,8 @@ import Cross from 'react-native-vector-icons/Entypo'
 import Save from 'react-native-vector-icons/Feather'
 import Check from 'react-native-vector-icons/EvilIcons'
 
+import { showAlert } from '../lib/utils'
+
 // RegEx for phone number validation
 const phoneRegExp = /^[+]{0,1}[0-9]{1,4}[0-9]*/
 
@@ -58,7 +60,7 @@ const SpeedDial = ( { optionName, storageKey } ) => {
           setInputPhoneNum( retrieve )
         }
       } )
-      .catch( () => new Error( 'Something went wrong retrieving the number' ) )
+      .catch( () => showAlert( 'Something went wrong while retrieving the number' ) )
   }, [] )
 
   // Validate input
@@ -71,8 +73,8 @@ const SpeedDial = ( { optionName, storageKey } ) => {
     try {
       setRetrievedNum( inputPhoneNum )
       return await AsyncStorage.setItem( storageKey, inputPhoneNum )
-    } catch ( err ) {
-      return new Error( 'Something went wrong while storing ' )
+    } catch ( _ ) {
+      return showAlert( 'Something went wrong while storing ' )
     }
   }
 
