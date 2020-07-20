@@ -42,3 +42,21 @@ export const BUTTONS_PA = [
   { name: '੦', value: BUTTON_VALS[ 0 ] },
   { name: '#', value: BUTTON_VALS.hash },
 ]
+
+export const SPEED_DIAL_OPTIONS = [
+  { name: BUTTON_VALS[ 2 ], key: 'SPEED_DIAL_2' },
+  { name: BUTTON_VALS[ 3 ], key: 'SPEED_DIAL_3' },
+  { name: BUTTON_VALS[ 4 ], key: 'SPEED_DIAL_4' },
+  { name: BUTTON_VALS[ 5 ], key: 'SPEED_DIAL_5' },
+  { name: BUTTON_VALS[ 6 ], key: 'SPEED_DIAL_6' },
+  { name: BUTTON_VALS[ 7 ], key: 'SPEED_DIAL_7' },
+  { name: BUTTON_VALS[ 8 ], key: 'SPEED_DIAL_8' },
+  { name: BUTTON_VALS[ 9 ], key: 'SPEED_DIAL_9' },
+]
+
+export const SETTINGS_OPTIONS = [
+  {
+    title: 'Speed Dial',
+    data: SPEED_DIAL_OPTIONS,
+  },
+]

@@ -10,10 +10,10 @@ const { Navigator, Screen } = createStackNavigator()
 
 const App = () => (
   <NavigationContainer>
-    <Navigator headerMode={null}>
-      <Screen name="Home" component={HomeScreen} />
-      <Screen name="Dialer" component={DialerScreen} />
-      <Screen name="Settings" component={SettingScreen} />
+    <Navigator>
+      <Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+      <Screen name="Dialer" component={DialerScreen} options={{ headerShown: false }} />
+      <Screen name="Settings" component={SettingScreen} options={{ title: 'Settings' }} />
     </Navigator>
   </NavigationContainer>
 )
