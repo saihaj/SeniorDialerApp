@@ -2,8 +2,12 @@ import React, { useContext } from 'react'
 import { Pressable, Text, StyleSheet, Dimensions } from 'react-native'
 import { string, oneOfType, number } from 'prop-types'
 import { RFValue } from 'react-native-responsive-fontsize'
+import find from 'lodash.find'
+import AsyncStorage from '@react-native-community/async-storage'
 
 import { DialerContext } from '../lib/contexts'
+import { SPEED_DIAL_OPTIONS } from '../lib/consts'
+import { showAlert, initiateCall } from '../lib/utils'
 
 const { width } = Dimensions.get( 'window' )
 
@@ -26,6 +30,19 @@ const styles = StyleSheet.create( {
 const NumPadButton = ( { name, value } ) => {
   const { phoneNumber, setPhoneNumber } = useContext( DialerContext )
 
+  const speedDial = () => {
+    const { key } = find( SPEED_DIAL_OPTIONS, ( { name: sdName } ) => sdName === value ) || {}
+
+    if ( key === undefined ) return
+
+    AsyncStorage.getItem( key )
+      .then( number => {
+        if ( number === null ) return showAlert( `Nothing set for speed dial for ${name}` )
+        return initiateCall( number )
+      } )
+      .catch( () => showAlert( 'Something went wrong ' ) )
+  }
+
   return (
     <Pressable
       style={( { pressed } ) => [
@@ -35,6 +52,7 @@ const NumPadButton = ( { name, value } ) => {
         styles.button,
       ]}
       onPress={() => { setPhoneNumber( () => phoneNumber + value ) }}
+      onLongPress={speedDial}
     >
       <Text style={styles.name}>{name}</Text>
     </Pressable>
