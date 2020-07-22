@@ -15,6 +15,20 @@
 		2DCD954D1E0B4F2C00145EB5 /* SeniorDialerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SeniorDialerAppTests.m */; };
 		68ED96EDDA090F1DD1810081 /* libPods-SeniorDialerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C87B476BF001557EDB1EB3 /* libPods-SeniorDialerApp.a */; };
 		841F0850431850AC45FF1723 /* libPods-SeniorDialerApp-SeniorDialerAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B66A8E62B4BD0895D98DB02 /* libPods-SeniorDialerApp-SeniorDialerAppTests.a */; };
+		A3C6E00D24C8B57F009150A8 /* star.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6DFFF24C8B57F009150A8 /* star.mp3 */; };
+		A3C6E00E24C8B57F009150A8 /* seven.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00024C8B57F009150A8 /* seven.mp3 */; };
+		A3C6E00F24C8B57F009150A8 /* nine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00124C8B57F009150A8 /* nine.mp3 */; };
+		A3C6E01024C8B57F009150A8 /* eight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00224C8B57F009150A8 /* eight.mp3 */; };
+		A3C6E01124C8B57F009150A8 /* dial.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00324C8B57F009150A8 /* dial.mp3 */; };
+		A3C6E01224C8B57F009150A8 /* five.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00424C8B57F009150A8 /* five.mp3 */; };
+		A3C6E01324C8B57F009150A8 /* one.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00524C8B57F009150A8 /* one.mp3 */; };
+		A3C6E01424C8B57F009150A8 /* clear.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00624C8B57F009150A8 /* clear.mp3 */; };
+		A3C6E01524C8B57F009150A8 /* zero.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00724C8B57F009150A8 /* zero.mp3 */; };
+		A3C6E01624C8B57F009150A8 /* four.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00824C8B57F009150A8 /* four.mp3 */; };
+		A3C6E01724C8B57F009150A8 /* six.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00924C8B57F009150A8 /* six.mp3 */; };
+		A3C6E01824C8B57F009150A8 /* two.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00A24C8B57F009150A8 /* two.mp3 */; };
+		A3C6E01924C8B57F009150A8 /* hash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00B24C8B57F009150A8 /* hash.mp3 */; };
+		A3C6E01A24C8B57F009150A8 /* three.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3C6E00C24C8B57F009150A8 /* three.mp3 */; };
 		BC7DF3329BB21ADFB22EFB69 /* libPods-SeniorDialerApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B12081A3FFDFCC9C8C0FC3F4 /* libPods-SeniorDialerApp-tvOS.a */; };
 		F4783418C7F2738AEE570006 /* libPods-SeniorDialerApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A78EE054BA9F52345E432175 /* libPods-SeniorDialerApp-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -67,6 +81,20 @@
 		99C87B476BF001557EDB1EB3 /* libPods-SeniorDialerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SeniorDialerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35C30BF2C0BE4FF057D307 /* Pods-SeniorDialerApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeniorDialerApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SeniorDialerApp-tvOSTests/Pods-SeniorDialerApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C66ADD8805041349B36B49E /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		A3C6DFFF24C8B57F009150A8 /* star.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = star.mp3; sourceTree = "<group>"; };
+		A3C6E00024C8B57F009150A8 /* seven.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = seven.mp3; sourceTree = "<group>"; };
+		A3C6E00124C8B57F009150A8 /* nine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nine.mp3; sourceTree = "<group>"; };
+		A3C6E00224C8B57F009150A8 /* eight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eight.mp3; sourceTree = "<group>"; };
+		A3C6E00324C8B57F009150A8 /* dial.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dial.mp3; sourceTree = "<group>"; };
+		A3C6E00424C8B57F009150A8 /* five.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = five.mp3; sourceTree = "<group>"; };
+		A3C6E00524C8B57F009150A8 /* one.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = one.mp3; sourceTree = "<group>"; };
+		A3C6E00624C8B57F009150A8 /* clear.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clear.mp3; sourceTree = "<group>"; };
+		A3C6E00724C8B57F009150A8 /* zero.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zero.mp3; sourceTree = "<group>"; };
+		A3C6E00824C8B57F009150A8 /* four.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = four.mp3; sourceTree = "<group>"; };
+		A3C6E00924C8B57F009150A8 /* six.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = six.mp3; sourceTree = "<group>"; };
+		A3C6E00A24C8B57F009150A8 /* two.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = two.mp3; sourceTree = "<group>"; };
+		A3C6E00B24C8B57F009150A8 /* hash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hash.mp3; sourceTree = "<group>"; };
+		A3C6E00C24C8B57F009150A8 /* three.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = three.mp3; sourceTree = "<group>"; };
 		A3DA9A6E24C24F48000EFA52 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		A3DA9A6F24C24F48000EFA52 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		A3DA9A7024C24F48000EFA52 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
@@ -153,6 +181,7 @@
 		13B07FAE1A68108700A75B9A /* SeniorDialerApp */ = {
 			isa = PBXGroup;
 			children = (
+				A3C6DFFD24C8B547009150A8 /* audio */,
 				A3DA9A6D24C24F48000EFA52 /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -247,6 +276,36 @@
 				B1BBFAD4B76A47AA9D7036CF /* Zocial.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		A3C6DFFD24C8B547009150A8 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				A3C6DFFE24C8B57F009150A8 /* en */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		A3C6DFFE24C8B57F009150A8 /* en */ = {
+			isa = PBXGroup;
+			children = (
+				A3C6DFFF24C8B57F009150A8 /* star.mp3 */,
+				A3C6E00024C8B57F009150A8 /* seven.mp3 */,
+				A3C6E00124C8B57F009150A8 /* nine.mp3 */,
+				A3C6E00224C8B57F009150A8 /* eight.mp3 */,
+				A3C6E00324C8B57F009150A8 /* dial.mp3 */,
+				A3C6E00424C8B57F009150A8 /* five.mp3 */,
+				A3C6E00524C8B57F009150A8 /* one.mp3 */,
+				A3C6E00624C8B57F009150A8 /* clear.mp3 */,
+				A3C6E00724C8B57F009150A8 /* zero.mp3 */,
+				A3C6E00824C8B57F009150A8 /* four.mp3 */,
+				A3C6E00924C8B57F009150A8 /* six.mp3 */,
+				A3C6E00A24C8B57F009150A8 /* two.mp3 */,
+				A3C6E00B24C8B57F009150A8 /* hash.mp3 */,
+				A3C6E00C24C8B57F009150A8 /* three.mp3 */,
+			);
+			name = en;
+			path = ../../src/assets/audio/en;
 			sourceTree = "<group>";
 		};
 		A3DA9A6D24C24F48000EFA52 /* Fonts */ = {
@@ -416,6 +475,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C6E01024C8B57F009150A8 /* eight.mp3 in Resources */,
+				A3C6E01124C8B57F009150A8 /* dial.mp3 in Resources */,
+				A3C6E01924C8B57F009150A8 /* hash.mp3 in Resources */,
+				A3C6E01524C8B57F009150A8 /* zero.mp3 in Resources */,
+				A3C6E01824C8B57F009150A8 /* two.mp3 in Resources */,
+				A3C6E01724C8B57F009150A8 /* six.mp3 in Resources */,
+				A3C6E01224C8B57F009150A8 /* five.mp3 in Resources */,
+				A3C6E00E24C8B57F009150A8 /* seven.mp3 in Resources */,
+				A3C6E01324C8B57F009150A8 /* one.mp3 in Resources */,
+				A3C6E01624C8B57F009150A8 /* four.mp3 in Resources */,
+				A3C6E00D24C8B57F009150A8 /* star.mp3 in Resources */,
+				A3C6E01424C8B57F009150A8 /* clear.mp3 in Resources */,
+				A3C6E00F24C8B57F009150A8 /* nine.mp3 in Resources */,
+				A3C6E01A24C8B57F009150A8 /* three.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
